@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-base-ubuntu18.04
+FROM nvcr.io/nvidia/cuda:10.1-base-ubuntu18.04
 
 RUN apt-get update && apt-get install -y libglib2.0-0\
     libsm6 \

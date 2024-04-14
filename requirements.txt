@@ -2,3 +2,5 @@ Cython==0.29.21
 matplotlib==3.3.3
 pandas==0.25.2
 scikit-learn==0.24.1
+pypng==0.20220715.0
+pydicom==2.4.4

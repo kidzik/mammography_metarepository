@@ -40,6 +40,6 @@ def process_dir(source, target):
 # output_image_path = "output.png"
 # flip_image(input_image_path, output_image_path, direction='horizontal')
 
-source = "/home/kidzik/miniatures-org/"
-target = "/home/kidzik/miniatures-converted/"
+source = "experiment_data/images/"
+target = "experiment_data/images_flipped/"
 process_dir(source, target)

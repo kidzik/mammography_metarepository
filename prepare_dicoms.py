@@ -30,7 +30,13 @@ def generate_path(filepath):
     study_id = filepath.split("/")[-3]
     path = group_id + "-" + study_id + "-" + ds[(0x0008, 0x103e)].value.replace(" ", "-") + ".png"
 
-    save_dicom_image_as_png(filepath, dirpath + path)
+    if os.path.exists(dirpath + path):
+        return
+    try:
+        save_dicom_image_as_png(filepath, dirpath + path)
+    except:
+        print("Read error")
+        return
 
 test = "/media/aikopernik/EBC6-BD83/DICOM/DICOM_PACZKA_1/1.2.826.0.1.3680043.2.135.736037.776827.7.1712922077.500.32/20200922/1.2.826.0.1.3680043.2.135.736037.776827.7.1712922079.937.37.dcm"
 
